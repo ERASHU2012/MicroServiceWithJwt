@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+	<changeSet author="Ashu" id="CHANGESET_CREATE_TABLES">
+		<createTable tableName="PRODUCT">
+			<column name="N_PRODUCT_ID" type="BIGINT">
+				<constraints nullable="false" primaryKey="true" unique="true" />
+			</column>
+			<column name="C_DESC" type="VARCHAR(100)" />
+			<column name="C_NAME" type="VARCHAR(100)" />
+			<column name="N_PRICE" type="FLOAT" />
+		</createTable>
+
+		<createTable tableName="ORDER_">
+			<column name="N_ORDER_ID" type="BIGINT">
+				<constraints nullable="false" primaryKey="true" unique="true" />
+			</column>
+			<column name="D_PURCHASE_DATE" type="VARCHAR(25)" />
+			<column name="N_QTY" type="INTEGER" />
+			<column name="N_PRODUCT_ID" type="BIGINT" />
+		</createTable>
+
+		<addForeignKeyConstraint baseColumnNames="N_PRODUCT_ID"
+			baseTableName="ORDER_" constraintName="FK_PRODUCT_ORDER_38VN5GDDL2124X67DNW7QS7H8"
+			referencedColumnNames="N_PRODUCT_ID" referencedTableName="PRODUCT" />
+	</changeSet>
+
+	<changeSet author="Ashu" id="CHANGESET_ADD_DEFAULT_DATA">
+		<insert tableName="PRODUCT">
+			<column name="N_PRODUCT_ID" value="501" />
+			<column name="C_NAME" value="Product_1" />
+			<column name="C_DESC" value="Product_desc_1" />
+			<column name="N_PRICE" value="10.5" />
+		</insert>
+
+
+		<insert tableName="PRODUCT">
+			<column name="N_PRODUCT_ID" value="502" />
+			<column name="C_NAME" value="Product_2" />
+			<column name="C_DESC" value="Product_desc_2" />
+			<column name="N_PRICE" value="20.5" />
+		</insert>
+		
+		<insert tableName="ORDER_">
+			<column name="N_ORDER_ID" value="101" />
+			<column name="D_PURCHASE_DATE" value="12/07/2018" />
+			<column name="N_QTY" value="1" />
+			<column name="N_PRODUCT_ID" value="501" />
+		</insert>
+
+		<insert tableName="ORDER_">
+			<column name="N_ORDER_ID" value="102" />
+	<column name="D_PURCHASE_DATE" value="13/07/2018" />
+	<column name="N_QTY" value="2" />
+	<column name="N_PRODUCT_ID" value="501" />
+		</insert>
+
+
+		<insert tableName="ORDER_">
+			<column name="N_ORDER_ID" value="103" />
+			<column name="D_PURCHASE_DATE" value="15/07/2018" />
+			<column name="N_QTY" value="3" />
+			<column name="N_PRODUCT_ID" value="502" />
+		</insert>
+
+		<insert tableName="ORDER_">
+			<column name="N_ORDER_ID" value="104" />
+			<column name="D_PURCHASE_DATE" value="16/07/2018" />
+			<column name="N_QTY" value="4" />
+			<column name="N_PRODUCT_ID" value="502" />
+		</insert>
+
+	</changeSet>
+</databaseChangeLog> 
