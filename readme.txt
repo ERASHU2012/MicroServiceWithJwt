@@ -5,20 +5,13 @@ order 9002
 product 9003
 getway 9004
 
-
+URLs: 
 http://localhost:9000/config/getConfig
-
-http://localhost:9002/order/getProduct
-
+http://localhost:9002/order/getProduct\
 http://localhost:9003/product/getProduct
 
 
-{
-	"PRODUCT_API_GET_PRODUCT_URL": "http://localhost:9003/product/getProduct",
-	"ORDER_API_GET_PRODUCT_URL": "http://localhost:9002/order/getProduct",
-	"TRACE_API_GET_LOG_URL": "http://localhost:9000/trace/setTrace"
-}
-
+Use Case UML Code 
 
 @startuml
 participant U as "USER"
