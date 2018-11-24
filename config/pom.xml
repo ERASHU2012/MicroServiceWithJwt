@@ -4,13 +4,13 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.kinexcs.demo</groupId>
-		<artifactId>Demo</artifactId>
+		<groupId>com.ashu</groupId>
+		<artifactId>ms</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.kinexcs.demo</groupId>
+	<groupId>com.ashu.ms</groupId>
 	<artifactId>config</artifactId>
 	<version>1.0.0</version>
 	<name>CONFIG</name>
@@ -18,7 +18,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.kinexcs.demo</groupId>
+			<groupId>com.ashu.ms</groupId>
 			<artifactId>common</artifactId>
 			<version>1.0.0</version>
 		</dependency>

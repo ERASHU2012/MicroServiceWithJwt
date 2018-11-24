@@ -9,8 +9,8 @@
 		<version>1.5.3.RELEASE</version>
 	</parent>
 
-	<groupId>com.kinexcs.demo</groupId>
-	<artifactId>Demo</artifactId>
+	<groupId>com.ashu</groupId>
+	<artifactId>ms</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>Demo</name>
